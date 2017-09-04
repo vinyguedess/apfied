@@ -1,0 +1,24 @@
+{
+  "name": "apfied",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^8.0.24",
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0",
+    "request": "^2.81.0"
+  },
+
+  "scripts": {
+    "build": "tsc",
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha Test/**/*.test.js",
+    "start": "node server.js"
+  }
+}

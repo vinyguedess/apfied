@@ -1,0 +1,13 @@
+# App files and folders
+/App
+/Core
+/coverage
+/node_modules
+/package-lock.json
+/test
+
+# OS and IDE files and folders
+/.idea
+/.DS_STORE
+/.vscode
+/nbproject
