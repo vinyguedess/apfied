@@ -3,6 +3,7 @@
   "description": "",
   "version": "1.0.0",
   "main": "server.js",
+  "license": "MIT",
 
   "dependencies": {
     "body-parser": "^1.17.2",
