@@ -74,7 +74,7 @@ export class MainController implements IController
                     'status': true,
                     'data': {
                         'total': data.count(),
-                        'resutSet': data
+                        'resultSet': data
                             .limit(request.query.limit || 10)
                             .offset(request.query.offset || 0)
                             .get()
@@ -114,7 +114,7 @@ export class MainController implements IController
 
         schema.delete(
             `${request.params.collection}.json`,
-            (element:any):boolean => element.id === request.params.id
+            (element:any):boolean => element.id !== request.params.id
         )
             .then((result):void => {
                 if (!result)

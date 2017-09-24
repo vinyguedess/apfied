@@ -6,6 +6,16 @@ export const app:Bootstrap = new Bootstrap();
 
 
 app.registerMiddleware((request, response, next:Function) => {
+    
+    response.header('Access-Control-Allow-Origin', '*');
+    response.header('Access-Control-Allow-Headers', 'Content-Type, Accept, Authorization');
+    response.header('Access-Control-Allow-Methods', 'OPTIONS,GET,POST,PUT,DELETE');
+
+    next();
+});
+
+
+app.registerMiddleware((request, response, next:Function) => {
 
     request.body = {};
     if (['post', 'put'].indexOf(request.method.toLowerCase()) >= 0)
